@@ -4,6 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced JavaScript</title>
+
+    <style>
+        
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 50%;
+            height: 100vh;
+            background-color: #723131;
+        }
+
+        .main h1{
+            font: 300;
+            font-weight: 300;
+            font-size: 100px;
+        }
+
+        input{
+            /* display: none; make it none for file because I have created a custom button */
+        }
+
+        .btn-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btnInp{
+            background-color: #b76c6c;
+            border-radius: 10px 12px;
+            padding: 5px;
+            color: rgb(182, 182, 225);
+            font-weight: 900;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        #btnInp:hover{
+            background-color: #362727;
+        }
+
+        .form-container{
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
 </head>
 <body>
     
@@ -43,7 +94,67 @@
     <h1>Hey Brother Two</h1>
     <h1 class="three">Hey Brother Three</h1>
     <h1>Hey Brother Five</h1>
-</div>
-    <script src="DOM.js"></script>
+    </div>
+    <hr><hr><hr>
+
+    <h1>Events and Event Handling Section</h1>
+
+
+
+    <h1 id="nameHeading">Shah Jahan</h1>
+
+    <!-- <input type="text" name="" id=""> -->
+
+    <hr>
+
+    <h3 class="phone">Select Your Device</h3>
+
+    <select>
+        <option selected disabled>Choose Your Device</option>
+        <option value="samsung">Samsung</option>
+        <option value="oppo">Oppo</option>
+        <option value="apple">Apple Iphone</option>
+        <option value="xiaomi">Xiaomi</option>
+    </select>
+
+
+    <hr><hr>
+
+    <div class="main">
+        <h1 class="typedText">A</h1>
+    </div>
+
+
+    <hr>
+
+    <!-- <input type="file" name="" id="fileInp"> -->
+
+    <div class="btn-div">
+    <button id="btnInp">Upload File</button>
+    </div>
+
+    <div class="form-container">
+
+    <form action="">
+        <input type="text" placeholder = "name..." id="">
+        <br>
+        <input type="number" placeholder = "age..." id="">
+        <br>
+        <input type="email" placeholder = "email..." id="">
+        <br>
+        <input type="text" placeholder = "profile..." id="">
+        <br>
+        <input type="submit" >
+    </form>
+    </div>
+
+    <h1 class="cardHeading"></h1>
+    <h1 class="nameHeading"></h1>
+    <h1 class="ageHeading"></h1>
+    <h1 class="emailHeading"></h1>
+    <img src="" alt="" class="userImg">
+
+    <!-- <script src="DOM.js"></script> -->
+    <script src="events.js"></script>
 </body>
 </html>

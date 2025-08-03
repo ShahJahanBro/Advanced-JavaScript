@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title> JavaScript </title>
+	
+	<style>
+	
+		body{
+			background-color: black;
+			color: white;
+		}
+		#bulb_ON{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			border-radius: 50%;
+			margin: 40vh auto;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <h1 id = "name">Shah Jahan</h1>
+
+	<div id = "bulb_ON">
+		
+	</div>
+
+	<h1 id = "changeText">Hover over me to Change Me</h1> -->
+
+
+	<p id="demo" >Welcome to the class of JS</p>
+	<button onclick="document.getElementById('demo').textContent = 'Thanks for having me in this pristegious class'">Click Me</button>
+
+
+	<h1 id="nameShah">Shah Jahan</h1>
+	<button class="btnShah" onclick="myEvents()">Change me</button>
+	<script>
+
+
+		let bulb = document.getElementById("bulb_ON");
+	
+		bulb.addEventListener("click", ()=>{
+
+			if(bulb.backgroundColor = "yellow")
+			bulb.style.backgroundColor = "white";
+			else
+			bulb.style.backgroundColor = "yellow";
+			
+
+		});
+	
+		let name = document.getElementById("name");
+	
+		name.addEventListener("click", ()=>{
+	
+			name.style.color = "yellow";
+			name.style.textAlign = "center"	
+			name.style.backgroundColor = "red";
+	
+		});
+	
+	
+		let text = document.getElementById("changeText")
+	
+		changeText.addEventListener("mouseover", ()=>{
+	
+			text.innerHTML= "Thanks for changing my content";
+			text.style.color = "black";
+			text.style.backgroundColor = "white";
+			text.style.textAlign = "center"
+		
+		});
+	
+		let newText = document.createElement("h1");
+		newText.innerHTML = "This is new content with the help of JavaScript";
+		document.body.append(newText);
+
+	</script>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

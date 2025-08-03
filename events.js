@@ -75,6 +75,7 @@ form.addEventListener("change", (data)=>{
 });
 
 let inputs = document.querySelectorAll("input");
+let card = document.querySelector(".card");
 
 form.addEventListener("submit" , (event)=>{
     event.preventDefault();
@@ -98,6 +99,8 @@ form.addEventListener("submit" , (event)=>{
     ageHeading.textContent =`Age : ${age}`
     emailHeading.textContent = `Email : ${email}`
     userImg.src = `Profile : ${img}`
+
+    card.style.display = "block"
 });
 
 

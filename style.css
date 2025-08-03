@@ -1,0 +1,56 @@
+ .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 50%;
+            height: 100vh;
+            background-color: #723131;
+        }
+
+        .main h1{
+            font: 300;
+            font-weight: 300;
+            font-size: 100px;
+        }
+
+     
+
+        .btn-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btnInp{
+            background-color: #b76c6c;
+            border-radius: 10px 12px;
+            padding: 5px;
+            color: rgb(182, 182, 225);
+            font-weight: 900;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        #btnInp:hover{
+            background-color: #362727;
+        }
+
+        .form-container{
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            padding: 20px;
+            border: 2px red solid;
+            display: none;
+        }
+
+        .hoverColor{
+            background-color: #723131;
+            width: 200px;
+            height: 200px;
+        }

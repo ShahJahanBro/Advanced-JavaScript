@@ -53,9 +53,73 @@ let sum = (n1,n2) => {
 
 console.log(sum(12,5));
 
-
+// NOTE: this refers to the object that is executing the current function.
 
 console.log(this); // refers to the window object
 
 
+let personalInfo = {
+    name: "Shah Jahan",
+    age: 23,
+    broz:function(){
+        console.log(this.name);
+    }
+}
+
+personalInfo.broz();
+
+let shahjan = {
+    bhai: "Abbas",
+    age: 15,
+    bhaiKaName: ()=>{
+        console.log(this.bhai);
+    }
+}
+
+shahjan.bhaiKaName();
+
+
+let czn = "Yaseen";
+let std = {
+    czn: "Abdul Ahad",
+
+    arrowFunc: ()=>{
+        console.log(`This is arrow function : ${this.czn}`);
+    },
+
+    regFunc: function(){
+        console.log(`This is regular function : ${this.czn}`);
+    },
+
+
+}
+
+
+
+std.regFunc();
+std.arrowFunc();
+
+
+let annonymousFunc = function(){
+    return "Shah Jahan"
+};
+
+console.log(annonymousFunc());
+
+document.writeln("<h1> Shah Jahan Brohi </h1>");
+
+let numArr = [1,2,3,4,5,6,7,8,9,10];
+
+let tableFunc = () =>{
+    document.writeln("<table border = '2px'> <tbody> ");
+
+
+    numArr.forEach((val,key)=>{
+        document.writeln("<tr> <td>" + val + "</td>" + "<td>" + key + "</td> </tr>" );
+    })
+
+    document.writeln("</table> </tbody>");
+}
+
+tableFunc();
 

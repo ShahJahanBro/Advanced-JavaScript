@@ -146,19 +146,84 @@ array.forEach((val,idx)=>{
     document.writeln(`Value : ${val} at Index : ${idx} `,"<br>");
 });
 
-document.writeln("<br> <br>For Each Of <br><br>");
+document.writeln("<br> <br>For Each <br><br>");
 
 for (const key of array) {
     document.writeln(`Value :  ${key} `,"<br>");
 }
 
-let newArr = array.map((ele)=>{
+let mappedArr = array.map((ele)=>{
     return ele += 10;
 })
 
 
-document.writeln("<br> <br>For Map <br><br>");
+document.writeln("<br> <br>Map <br><br>");
 
-newArr.forEach((val,idx)=>{
+mappedArr.forEach((val,idx)=>{
     document.writeln(`Value : ${val} at Index : ${idx} `,"<br>");
 });
+
+let filteredArr = array.filter((ele)=>{
+    return ele >= 5;
+})
+
+
+document.writeln("<br> <br>Filter <br><br>");
+
+filteredArr.forEach((val,idx)=>{
+    document.writeln(`Value : ${val} at Index : ${idx} `,"<br>");
+});
+
+
+document.writeln("<br> <br>Find <br><br>");
+
+let foundFirstElement = array.find((ele)=>{
+    return ele > 5; // will return the element that it gets for the first time, works from left to right
+});
+
+document.writeln(`I found this element : ${foundFirstElement}`);
+
+
+document.writeln("<br> <br>Findlast <br><br>");
+let foundLastElement = array.findLast((ele)=>{
+    return ele > 5; // will return the element that it gets for the first time, works from right to left
+});
+
+document.writeln(`I found this element : ${foundLastElement}`);
+
+
+
+document.writeln("<br> <br>Find Index <br><br>");
+let foundFirstElementIdx = array.findIndex((ele)=>{
+    return ele > 5; 
+});
+
+document.writeln(`I found this index : ${foundFirstElementIdx}`);
+
+
+document.writeln("<br><br> Reduce <br><br>");
+
+let sumOfArray = array.reduce((acc, curr)=>{
+    return acc+curr;
+},10)
+
+document.writeln("Sum of the Array is : ", sumOfArray)
+
+
+let headingCollection = document.getElementsByClassName("heading"); 
+
+let headingNodelist = document.querySelectorAll(".heading"); 
+
+let boxCollection = document.getElementsByClassName("box");
+
+const balls = Array.from(boxCollection);
+
+balls.forEach((ball)=>{
+    ball.style.backgroundColor = "red"
+});
+
+
+let para = document.createElement("p");
+let paraText = document.createTextNode("I am a newly created Paragraph using DOM...");
+para.appendChild(paraText);
+document.body.append(para)

@@ -3,6 +3,7 @@
 	<title> JavaScript </title>
 	
 	<style>
+
 	
 		body{
 			background-color: black;
@@ -14,6 +15,18 @@
 			background-color: yellow;
 			border-radius: 50%;
 			margin: 40vh auto;
+		}
+
+		.container{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.box{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: #fff;
 		}
 	</style>
 </head>
@@ -35,46 +48,69 @@
 
 	<h1 id="nameShah">Shah Jahan</h1>
 	<button class="btnShah" onclick="myEvents()">Change me</button>
+
+
+	<h1 class="heading">This is a heading</h1>
+	<h2 class="heading">This is a heading</h2>
+	<h3 class="heading">This is a heading</h3>
+	<h4 class="heading">This is a heading</h1>
+	<h5 class="heading">This is a heading</h5>
+	<h6 class="heading">This is a heading</h6>
+
+	<section class="container"> 
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	</section>
+
+
 	<script>
 
 
 		let bulb = document.getElementById("bulb_ON");
 	
-		bulb.addEventListener("click", ()=>{
+		// bulb.addEventListener("click", ()=>{
 
-			if(bulb.backgroundColor = "yellow")
-			bulb.style.backgroundColor = "white";
-			else
-			bulb.style.backgroundColor = "yellow";
+		// 	if(bulb.backgroundColor = "yellow")
+		// 	bulb.style.backgroundColor = "white";
+		// 	else
+		// 	bulb.style.backgroundColor = "yellow";
 			
 
-		});
+		// });
 	
-		let name = document.getElementById("name");
+		// let name = document.getElementById("name");
 	
-		name.addEventListener("click", ()=>{
+		// name.addEventListener("click", ()=>{
 	
-			name.style.color = "yellow";
-			name.style.textAlign = "center"	
-			name.style.backgroundColor = "red";
+		// 	name.style.color = "yellow";
+		// 	name.style.textAlign = "center"	
+		// 	name.style.backgroundColor = "red";
 	
-		});
+		// });
 	
 	
-		let text = document.getElementById("changeText")
+		// let text = document.getElementById("changeText")
 	
-		changeText.addEventListener("mouseover", ()=>{
+		// changeText.addEventListener("mouseover", ()=>{
 	
-			text.innerHTML= "Thanks for changing my content";
-			text.style.color = "black";
-			text.style.backgroundColor = "white";
-			text.style.textAlign = "center"
+		// 	text.innerHTML= "Thanks for changing my content";
+		// 	text.style.color = "black";
+		// 	text.style.backgroundColor = "white";
+		// 	text.style.textAlign = "center"
 		
-		});
+		// });
 	
-		let newText = document.createElement("h1");
-		newText.innerHTML = "This is new content with the help of JavaScript";
-		document.body.append(newText);
+		// let newText = document.createElement("h1");
+		// newText.innerHTML = "This is new content with the help of JavaScript";
+		// document.body.append(newText);
 
 	</script>
 

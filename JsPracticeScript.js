@@ -123,3 +123,42 @@ let tableFunc = () =>{
 
 tableFunc();
 
+
+let myName = "Shah Jahan Brohi Computer Science";
+
+let cont = document.createElement("h1");
+    document.writeln(myName);
+    cont.style.backgroundColor = "yellow";
+    cont.style.color = "red";
+    cont.textContent = myName;
+    document.body.appendChild(cont);
+
+for (const char of myName) {
+    document.writeln(char);
+}
+
+
+let array = [1,2,3,4,5,6,7,8,9,10];
+
+document.writeln("<br> <br>For Each Loop <br><br>");
+
+array.forEach((val,idx)=>{
+    document.writeln(`Value : ${val} at Index : ${idx} `,"<br>");
+});
+
+document.writeln("<br> <br>For Each Of <br><br>");
+
+for (const key of array) {
+    document.writeln(`Value :  ${key} `,"<br>");
+}
+
+let newArr = array.map((ele)=>{
+    return ele += 10;
+})
+
+
+document.writeln("<br> <br>For Map <br><br>");
+
+newArr.forEach((val,idx)=>{
+    document.writeln(`Value : ${val} at Index : ${idx} `,"<br>");
+});

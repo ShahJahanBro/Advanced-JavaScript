@@ -1,3 +1,87 @@
+let form = document.querySelector("form");
+let inputUser = document.querySelectorAll("input");
+
+let enteredUserName = document.getElementById("enteredUserName");
+let enteredUserEmail = document.getElementById("enteredUserEmail");
+let userImg = document.getElementById("userImg");
+
+let addBtn = document.getElementById("addBtn");
+
+form.addEventListener("submit", (event)=>{
+event.preventDefault();
+// inputUser[0].addEventListener("change",(event)=>{
+//     userName.textContent = event.target.value;
+// });
+
+// inputUser[1].addEventListener("change",(event)=>{
+//     userEmail.textContent = event.target.value;
+// });
+
+// inputUser[2].addEventListener("change",(event)=>{
+//     userImg.src = event.target.value;
+// });
+
+let userDetailContainer = document.querySelector(".userDetailContainer");
+
+let card = document.createElement("div");
+card.setAttribute("class","card");
+
+let profile = document.createElement("div");
+profile.setAttribute("class", "profile");
+
+let userProfile = document.createElement("img");
+userProfile.setAttribute("id","userImg");
+
+let userName = document.createElement("h1");
+userName.setAttribute("id","enteredUserName");
+
+let email = document.createElement("p");
+email.setAttribute("id", "enteredUserEmail");
+
+
+profile.append(userProfile);
+card.append(profile);
+card.append(userName);
+card.append(email);
+userDetailContainer.append(card);
+
+userName.textContent = inputUser[0].value;
+email.textContent = inputUser[1].value;
+userProfile.src = inputUser[2].value;
+
+console.log(enteredUserName, enteredUserEmail, userImg);
+
+
+});
+
+
+
+
+// userName.textContent = "Abbas";
+// userEmail.textContent = "shahjan@gmail.com"
+// userImg.src = "https://images.unsplash.com/photo-1743360167520-761fa087ee8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+
+let unorderedlist = document.querySelector(".unorderedList");
+
+let inpBox = document.querySelector("#inpBox");
+let addItemBtn = document.querySelector(".addItemBtn");
+let username = '';
+
+
+
+inpBox.addEventListener("change",(event)=>{
+    username = event.target.value;
+});
+
+addItemBtn.addEventListener("click", ()=>{
+    let list = document.createElement("li");
+    list.textContent = username;
+    unorderedlist.appendChild(list);   
+});
+
+
+
+
 let header = document.querySelector(".header");
 let str = "Frequently Asked Questions"
 
